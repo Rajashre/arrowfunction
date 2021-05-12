@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import FirstPractice from './components/PropsPractice'
+import details from './components/details'
 
 function App() {
+  //console.log(details)
+  const Persondata = details.map(item => <FirstPractice  {...item}/>)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <div>
+          {Persondata}
+        </div>
     </div>
+      
   );
 }
-
+ 
 export default App;
